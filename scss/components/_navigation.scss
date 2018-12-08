@@ -1,0 +1,21 @@
+a {
+  text-decoration: none;
+}
+
+.nav {
+  margin-bottom: 3em;
+}
+
+.nav__item {
+  border-radius: 5px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+
+  &:first-child {
+    background-color: $primary-color;
+    a {
+      color: white;
+    }
+  }
+}

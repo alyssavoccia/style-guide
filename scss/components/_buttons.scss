@@ -1,0 +1,20 @@
+.btn {
+
+  @include button-color($button-color);
+
+  &--default {
+    @extend %btn;
+  }
+  &--success {
+    @extend %btn;
+  }
+  &--error {
+    @extend %btn;
+  }
+  &--warning {
+    @extend %btn;
+  }
+  &--info {
+    @extend %btn;
+  }
+}

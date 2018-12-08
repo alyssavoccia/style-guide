@@ -1,0 +1,29 @@
+// Button Colors
+@mixin button-color($map) {
+  @each $button, $color in $map {
+    &--#{$button} {
+      background-color: $color;
+    }
+  }
+}
+
+// // Grid Colors
+// @mixin themes($map) {
+//   @each $theme, $color in $map {
+//     .grid__#{$theme} {
+//       background-color: $color;
+//     }
+//   }
+// }
+
+// Creating a flex container
+@mixin flex(
+ $disp: flex,
+ $dir: null, 
+ $wrap: null,
+ $just:null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}

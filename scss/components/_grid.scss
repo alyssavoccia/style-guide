@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.grid__row {
+  @include flex($dir: column);
+}
+
+.card {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: left;
+}

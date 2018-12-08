@@ -1,0 +1,30 @@
+// Color Variables
+$primary-color: #58E1C1;
+$secondary-color: #51DDFC;
+$success: #63CC82;
+$error: #E4757A;
+$warning: #FD7856;
+$info: #927BC1;
+
+// Button Colors
+$button-color: (
+  'default': $secondary-color,
+  'success': $success,
+  'error': $error,
+  'warning': $warning,
+  'info': $info,
+);
+
+// Grid Colors
+$grid-color: (
+  'col--12': #80E8D1,
+  'col--6': #3FABCA,
+  'col--4': #7EE6FD,
+  'col--3': #DEB2EE,
+  'col--5': #88D9A0,
+  'col--7': #EC9FA3,
+  'col--8': #FD9F85,
+);
+
+// Fonts
+$main-font: 'Montserrat', sans-serif;
