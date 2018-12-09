@@ -13,6 +13,9 @@
 .link {
   color: $secondary-color;
   font-weight: bold;
+  &:hover {
+    opacity: .7;
+  }
 }
 
 .blockquote {

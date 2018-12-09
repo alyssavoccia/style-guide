@@ -1,3 +1,7 @@
+// Font Stacks
+$font-url: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,800';
+$font-family-primary: 'Monteserrat', Arial, sans-serif;
+
 // Color Variables
 $primary-color: #58E1C1;
 $secondary-color: #51DDFC;
@@ -15,16 +19,19 @@ $button-color: (
   'info': $info,
 );
 
+// Grid
+$g-col-w: 65px;
+$g-gutter-w: 10px;
+$g-col-total: 12;
+$g-max-width: 1050px;
+
 // Grid Colors
 $grid-color: (
-  'col--12': #80E8D1,
-  'col--6': #3FABCA,
-  'col--4': #7EE6FD,
-  'col--3': #DEB2EE,
-  'col--5': #88D9A0,
-  'col--7': #EC9FA3,
-  'col--8': #FD9F85,
+  '12': #80E8D1,
+  '6': #3FABCA,
+  '4': #7EE6FD,
+  '3': #DEB2EE,
+  '5': #88D9A0,
+  '7': #EC9FA3,
+  '8': #FD9F85,
 );
-
-// Fonts
-$main-font: 'Montserrat', sans-serif;

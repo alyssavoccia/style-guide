@@ -429,6 +429,10 @@ template {
   width: 90%;
 }
 
+[class^=grid__col--].theme__colors {
+  padding: 10px;
+}
+
 .grid__row {
   width: 90%;
 }

@@ -7,15 +7,6 @@
   }
 }
 
-// // Grid Colors
-// @mixin themes($map) {
-//   @each $theme, $color in $map {
-//     .grid__#{$theme} {
-//       background-color: $color;
-//     }
-//   }
-// }
-
 // Creating a flex container
 @mixin flex(
  $disp: flex,
@@ -27,3 +18,32 @@
   flex-wrap: $wrap;
   justify-content: $just;
 }
+
+// Adjacent sibling margins
+@mixin double($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+
+// Media Queries
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, 'sm');
+            
+  @if $value == null {
+    @warn "#{$break} is not a valid breakpoint name.";          
+  }
+            
+  @else if $value < $sm {
+    @media (max-width: $value) {
+      @content;          
+    }
+  }
+  @else {
+    @media (min-width: $value) {
+      @content;          
+   }
+  }      
+ } 

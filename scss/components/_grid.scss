@@ -1,15 +1,64 @@
+// ==========================================================================
+// Grid
+// ==========================================================================
+
 .container {
   margin: 0 auto;
   text-align: center;
   width: 90%;
 }
 
+// Setup the grid container
 .grid__row {
-  @include flex($dir: column);
+  @extend %clearfix;
+  @extend .centered;
+  width: 90%;
+  
+  // Make nested grid 100%
+  [class*="grid__col--"] > & {
+    width: 100%;
+  }
+  
+  // Set a max-width for the grid container
+  @media (min-width: 1100px) {
+     width: 1050px;
+  }
 }
 
-.card {
-  margin-top: 2em;
-  margin-bottom: 3em;
-  text-align: left;
+// Calculate the grid columns
+@media (min-width: 769px) {
+  @for $i from 1 through $g-col-total {
+    $context: g-context($g-col-w, $g-col-total ,$g-gutter-w) !global;  
+    $target: ($g-col-w * $i) + ($g-gutter-w * ($i - 1));
+    
+    // Generate column modifier classes
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+// Column styles
+[class^="grid__col--"] {
+  @media (min-width: 1px) and (max-width: 768px) {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  @media (min-width: 769px) {
+    @include double(percentage($g-gutter-w / $context));    
+    float: left;
+    min-height: 1px;
+    text-align: left;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}
+
+// Generates the background color for the grid-system display
+@each $size, $color in $grid-color {
+  .grid__col--#{$size}.theme__colors {
+    background-color: $color;
+  }
 }
