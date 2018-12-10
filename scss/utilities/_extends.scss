@@ -4,6 +4,7 @@
   color: white;
   cursor: pointer;
   display: inline-block;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 1em;
@@ -29,7 +30,13 @@
 
 // Center elements on the page
 .centered {
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Gives the sample grid elements padding and space between
+%grid-shape {
+  padding: 10px 0;
+  border-radius: 5px;
 }

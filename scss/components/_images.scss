@@ -1,10 +1,18 @@
 .img--logo {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .img--avatar {
-  align-self: center;
-  margin-bottom: 1em;
-  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.img--frame {
+  border: 1px solid lightgray;
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
 }

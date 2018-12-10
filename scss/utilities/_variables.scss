@@ -2,6 +2,12 @@
 $font-url: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,800';
 $font-family-primary: 'Monteserrat', Arial, sans-serif;
 
+// Breakpoints
+$breakpoints: (
+  'xs': 480px,
+  'lg': 1400px,  
+);
+
 // Color Variables
 $primary-color: #58E1C1;
 $secondary-color: #51DDFC;
@@ -20,7 +26,7 @@ $button-color: (
 );
 
 // Grid
-$g-col-w: 65px;
+$g-col-w: 87px;
 $g-gutter-w: 10px;
 $g-col-total: 12;
 $g-max-width: 1050px;

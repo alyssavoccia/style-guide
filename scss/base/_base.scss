@@ -2,7 +2,7 @@ body {
   font-family: $font-family-primary;
 }
 
-a {
+.nav__item a {
   color: black;
 }
 
@@ -12,6 +12,6 @@ ul {
 }
 
 p {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }

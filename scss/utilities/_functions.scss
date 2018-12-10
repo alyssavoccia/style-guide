@@ -1,5 +1,5 @@
 // Set the "context" width for the grid 
-@function g-context($g-col-width, $g-col-count ,$g-gutter-width) {
-  $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+@function g-context($g-col-w, $g-col-total ,$g-gutter-w) {
+  $g-context: ($g-col-w * $g-col-total) + ($g-gutter-w * ($g-col-total - 1));
   @return $g-context;
 }

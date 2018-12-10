@@ -1,7 +1,10 @@
+button {
+  text-align: center;
+}
+
 .btn {
 
   @include button-color($button-color);
-
   &--default {
     @extend %btn;
   }
@@ -16,5 +19,15 @@
   }
   &--info {
     @extend %btn;
+  }
+}
+
+
+// When screen is 1400px or larger, display buttons in a line
+@include mq('lg') {
+  .grid__col--12 button {
+    display: inline-block;
+    margin: 0 .5em;
+    width: 18%;
   }
 }
